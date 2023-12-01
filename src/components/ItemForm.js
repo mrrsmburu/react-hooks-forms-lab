@@ -2,6 +2,16 @@ import React from "react";
 import { v4 as uuid } from "uuid";
 
 function ItemForm(props) {
+  const newItem = {
+    id: uuid(), 
+    name: itemName,
+    category: itemCategory,
+  };
+  function addElement(element) {
+    setArray([...array, element]);
+  }
+
+
   return (
     <form className="NewItem">
       <label>

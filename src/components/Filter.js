@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Filter({ onCategoryChange }) {
+  const [searchText, setSearchText] = useState('');
+  const filteredItems = items.filter(item =>
+    item.name.toLowerCase().includes(searchText.toLowerCase())
+  );
+
+
   return (
     <div className="Filter">
       <input type="text" name="search" placeholder="Search..." />
